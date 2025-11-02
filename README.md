@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pierre Landing Page
 
-## Getting Started
+Landing page moderna e responsiva para o Pierre, assistente de IA financeiro.
 
-First, run the development server:
+## 🚀 Tecnologias
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router)
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Design Tokens** (sistema de design baseado em Figma)
+
+## 📁 Estrutura do Projeto
+
+```
+pierrelp/
+├── app/
+│   ├── globals.css          # CSS variables dos design tokens
+│   ├── layout.tsx           # Layout principal
+│   └── page.tsx             # Página inicial
+├── components/
+│   ├── sections/            # Seções da landing page
+│   │   ├── Navbar.tsx       # Navbar com glassmorphism
+│   │   ├── HeroSection.tsx  # Hero section com título e iPhone
+│   │   └── FeaturesSection.tsx # Features com cards e highlights
+│   └── ui/                  # Componentes base
+│       ├── Button.tsx       # Botão com variantes
+│       └── Container.tsx    # Container responsivo
+├── lib/
+│   ├── design-tokens.json   # Design tokens do Figma
+│   ├── design-tokens.ts     # Utilitário TypeScript para tokens
+│   └── landing-page-structure.json # Estrutura completa da página
+└── public/
+    └── images/              # Imagens WebP
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Design System
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O projeto utiliza um sistema de design tokens extraído do Figma, incluindo:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Cores**: Primary, Secondary, Neutral, Accent
+- **Tipografia**: Tamanhos, pesos, line heights, letter spacing
+- **Espaçamento**: Padding, margin, gap scales
+- **Border Radius**: Valores de arredondamento
+- **Shadows**: Efeitos de sombra
+- **Breakpoints**: Responsive design
 
-## Learn More
+Todos os tokens estão mapeados em `lib/design-tokens.json` e disponíveis como CSS variables em `app/globals.css`.
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Seções Implementadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✅ **Navbar**: Glassmorphism com logo e CTAs
+- ✅ **Hero Section**: Título impactante e mockup do iPhone
+- ✅ **Features Section**: Grid de cards e highlights
+- 🔄 **FAQ Section**: Em desenvolvimento
+- 🔄 **Footer**: Em desenvolvimento
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Como Executar
 
-## Deploy on Vercel
+```bash
+# Instalar dependências
+npm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Executar em desenvolvimento
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Build para produção
+npm run build
+
+# Iniciar servidor de produção
+npm start
+```
+
+## 📝 Design Tokens
+
+Os design tokens podem ser acessados de duas formas:
+
+1. **CSS Variables**: Diretamente no CSS usando `var(--color-primary-background)`
+2. **TypeScript**: Importando de `lib/design-tokens.ts`
+
+## 🎯 Próximos Passos
+
+- [ ] Implementar FAQ Section com accordion
+- [ ] Implementar Footer com links e QR code
+- [ ] Adicionar animações GSAP
+- [ ] Otimizar imagens WebP
+- [ ] Implementar responsividade completa
+- [ ] Adicionar testes
+
+## 📄 Licença
+
+Proprietário - CloudWalk, Inc.
