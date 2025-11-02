@@ -6,7 +6,6 @@
 
 import { gsap } from 'gsap';
 import { getDuration } from '../config';
-import type { gsap as GSAP } from 'gsap';
 
 export interface StaggerChildrenOptions {
   /**
@@ -56,7 +55,7 @@ export interface StaggerChildrenOptions {
  */
 export function staggerChildren(
   options: StaggerChildrenOptions
-): GSAP.core.Timeline {
+): gsap.core.Timeline {
   const {
     parent,
     children,

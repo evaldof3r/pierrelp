@@ -18,7 +18,7 @@ export interface UseScrollAnimationOptions {
   /**
    * Element to animate (ref or selector)
    */
-  element?: React.RefObject<HTMLElement> | string | HTMLElement | null;
+  element?: React.RefObject<HTMLElement | null> | React.RefObject<HTMLElement> | string | HTMLElement | null;
   
   /**
    * Animation configuration
@@ -106,7 +106,7 @@ export function useScrollAnimation({
       scrollTriggerRef.current = ScrollTrigger.create({
         ...config,
         animation: anim,
-        trigger: target,
+        trigger: target as gsap.DOMTarget,
       });
       
       animationRef.current = anim;
@@ -143,7 +143,7 @@ export function useScrollAnimation({
  * Simplified hook for common fade-in-up animation
  */
 export function useFadeInUp(
-  element: React.RefObject<HTMLElement> | string | HTMLElement | null,
+  element: React.RefObject<HTMLElement | null> | React.RefObject<HTMLElement> | string | HTMLElement | null,
   options: {
     duration?: number;
     delay?: number;

@@ -6,7 +6,6 @@
 
 import { gsap } from 'gsap';
 import { getDuration } from '../config';
-import type { gsap as GSAP } from 'gsap';
 
 export interface FadeInUpOptions {
   /**
@@ -45,7 +44,7 @@ export interface FadeInUpOptions {
 export function fadeInUp(
   target: gsap.TweenTarget,
   options: FadeInUpOptions = {}
-): GSAP.core.Tween {
+): gsap.core.Tween {
   const {
     fromOpacity = 0,
     fromY = 50,

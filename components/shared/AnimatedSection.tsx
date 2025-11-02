@@ -92,7 +92,7 @@ export function AnimatedSection({
   animation = {},
   scrollTrigger = {},
 }: AnimatedSectionProps) {
-  const sectionRef = useRef<HTMLElement | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   
   const {
     enabled = true,
@@ -109,11 +109,12 @@ export function AnimatedSection({
     enabled,
   });
   
-  // Type-safe ref casting based on component type
+  // Type-safe ref casting for polymorphic component
+  // All HTML elements accept HTMLElement refs, so we cast here
   const ref = sectionRef as React.Ref<HTMLElement>;
   
   return (
-    <Component ref={ref} className={className}>
+    <Component ref={ref as any} className={className}>
       {children}
     </Component>
   );
