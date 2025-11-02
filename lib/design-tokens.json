@@ -1,0 +1,486 @@
+{
+  "$schema": "https://json.schemastore.org/design-tokens",
+  "version": "1.0.0",
+  "name": "Pierre Design System",
+  "description": "Design tokens extracted from Figma for the Pierre landing page",
+  "colors": {
+    "primary": {
+      "background": {
+        "value": "#09090b",
+        "description": "Main background color (dark theme)"
+      },
+      "background-base": {
+        "value": "rgba(9, 9, 11, 0.4)",
+        "description": "Base background with transparency (for glassmorphism effects)"
+      },
+      "surface": {
+        "value": "#18181b",
+        "description": "Surface/container background color"
+      }
+    },
+    "secondary": {
+      "accent": {
+        "value": "#fafafa",
+        "description": "Light accent background"
+      },
+      "accent-hover": {
+        "value": "#f4f4f5",
+        "description": "Light accent background hover state"
+      }
+    },
+    "neutral": {
+      "foreground": {
+        "value": "#fafafa",
+        "description": "Primary text color (light)"
+      },
+      "foreground-muted": {
+        "value": "#a1a1aa",
+        "description": "Muted/secondary text color"
+      },
+      "foreground-inverted": {
+        "value": "#09090b",
+        "description": "Text color for dark backgrounds"
+      },
+      "foreground-disabled": {
+        "value": "#52525b",
+        "description": "Disabled text color"
+      },
+      "border": {
+        "value": "#52525b",
+        "description": "Border color"
+      }
+    },
+    "accent": {
+      "green-primary": {
+        "value": "#95ff48",
+        "description": "Primary green accent (CTA buttons)"
+      },
+      "green-secondary": {
+        "value": "#9bfd53",
+        "description": "Secondary green accent (highlight sections)"
+      },
+      "text-light": {
+        "value": "#f8f8f8",
+        "description": "Light text color for hero sections"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": {
+        "value": "Geist",
+        "description": "Primary font family",
+        "fallback": "sans-serif"
+      },
+      "sans": {
+        "value": "var(--font-geist-sans)",
+        "description": "CSS variable for sans-serif font"
+      },
+      "mono": {
+        "value": "var(--font-geist-mono)",
+        "description": "CSS variable for monospace font"
+      }
+    },
+    "fontSize": {
+      "text-sm": {
+        "value": "14px",
+        "rem": "0.875rem",
+        "description": "Small body text (14px)"
+      },
+      "text-base": {
+        "value": "16px",
+        "rem": "1rem",
+        "description": "Base body text (16px)"
+      },
+      "text-xl": {
+        "value": "20px",
+        "rem": "1.25rem",
+        "description": "Extra large text (20px)"
+      },
+      "text-2xl": {
+        "value": "24px",
+        "rem": "1.5rem",
+        "description": "2XL text (24px)"
+      },
+      "text-3xl": {
+        "value": "30px",
+        "rem": "1.875rem",
+        "description": "3XL text (30px)"
+      },
+      "text-5xl": {
+        "value": "48px",
+        "rem": "3rem",
+        "description": "5XL text (48px)"
+      },
+      "display-medium": {
+        "value": "48px",
+        "rem": "3rem",
+        "description": "Display medium size (48px)"
+      },
+      "hero-large": {
+        "value": "76px",
+        "rem": "4.75rem",
+        "description": "Hero heading size (76px)"
+      },
+      "hero-extra-large": {
+        "value": "80px",
+        "rem": "5rem",
+        "description": "Extra large hero heading (80px)"
+      }
+    },
+    "fontWeight": {
+      "normal": {
+        "value": "400",
+        "description": "Regular font weight"
+      },
+      "medium": {
+        "value": "500",
+        "description": "Medium font weight"
+      },
+      "bold": {
+        "value": "700",
+        "description": "Bold font weight"
+      }
+    },
+    "lineHeight": {
+      "leading-6": {
+        "value": "24px",
+        "rem": "1.5rem",
+        "description": "Line height for base text"
+      },
+      "leading-7": {
+        "value": "28px",
+        "rem": "1.75rem",
+        "description": "Line height for XL text"
+      },
+      "leading-8": {
+        "value": "32px",
+        "rem": "2rem",
+        "description": "Line height for 2XL text"
+      },
+      "leading-none": {
+        "value": "1",
+        "description": "Tight line height (1)"
+      },
+      "leading-tight": {
+        "value": "1.1",
+        "description": "Tight line height (1.1)"
+      },
+      "leading-normal": {
+        "value": "1.4",
+        "description": "Normal line height (1.4)"
+      },
+      "leading-100": {
+        "value": "100%",
+        "description": "100% line height (for small text)"
+      }
+    },
+    "letterSpacing": {
+      "tight": {
+        "value": "-2.28px",
+        "description": "Tight letter spacing for hero text"
+      },
+      "normal": {
+        "value": "0",
+        "description": "Normal letter spacing"
+      }
+    },
+    "textStyles": {
+      "heading-3": {
+        "fontFamily": "Geist",
+        "fontSize": "20px",
+        "fontWeight": "400",
+        "lineHeight": "28px",
+        "description": "Heading 3 style"
+      },
+      "display-medium": {
+        "fontFamily": "Geist",
+        "fontSize": "48px",
+        "fontWeight": "500",
+        "lineHeight": "1",
+        "description": "Display medium style"
+      },
+      "body-medium": {
+        "fontFamily": "Geist",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "lineHeight": "24px",
+        "description": "Body medium style"
+      },
+      "body-small-regular": {
+        "fontFamily": "Geist",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "100%",
+        "description": "Body small regular style"
+      }
+    }
+  },
+  "spacing": {
+    "scale": {
+      "0": {
+        "value": "0px",
+        "rem": "0"
+      },
+      "1": {
+        "value": "4px",
+        "rem": "0.25rem"
+      },
+      "2": {
+        "value": "8px",
+        "rem": "0.5rem"
+      },
+      "3": {
+        "value": "12px",
+        "rem": "0.75rem"
+      },
+      "4": {
+        "value": "16px",
+        "rem": "1rem",
+        "description": "Base spacing unit (p-4)"
+      },
+      "6": {
+        "value": "24px",
+        "rem": "1.5rem",
+        "description": "p-6 equivalent"
+      },
+      "8": {
+        "value": "32px",
+        "rem": "2rem"
+      },
+      "10": {
+        "value": "40px",
+        "rem": "2.5rem"
+      },
+      "11": {
+        "value": "44px",
+        "rem": "2.75rem",
+        "description": "p-11 spacing"
+      },
+      "12": {
+        "value": "48px",
+        "rem": "3rem"
+      },
+      "16": {
+        "value": "64px",
+        "rem": "4rem"
+      },
+      "20": {
+        "value": "80px",
+        "rem": "5rem"
+      },
+      "24": {
+        "value": "96px",
+        "rem": "6rem",
+        "description": "p-24 spacing"
+      }
+    },
+    "gap": {
+      "xs": {
+        "value": "4px",
+        "rem": "0.25rem"
+      },
+      "sm": {
+        "value": "8px",
+        "rem": "0.5rem"
+      },
+      "md": {
+        "value": "16px",
+        "rem": "1rem"
+      },
+      "lg": {
+        "value": "20px",
+        "rem": "1.25rem"
+      },
+      "xl": {
+        "value": "24px",
+        "rem": "1.5rem"
+      },
+      "2xl": {
+        "value": "40px",
+        "rem": "2.5rem"
+      },
+      "3xl": {
+        "value": "64px",
+        "rem": "4rem"
+      },
+      "4xl": {
+        "value": "80px",
+        "rem": "5rem"
+      }
+    },
+    "padding": {
+      "p-4": {
+        "value": "16px",
+        "rem": "1rem"
+      },
+      "p-6": {
+        "value": "24px",
+        "rem": "1.5rem"
+      },
+      "p-11": {
+        "value": "44px",
+        "rem": "2.75rem"
+      },
+      "p-24": {
+        "value": "96px",
+        "rem": "6rem"
+      }
+    },
+    "margin": {
+      "section-vertical": {
+        "value": "80px",
+        "rem": "5rem",
+        "description": "Vertical margin between sections"
+      },
+      "section-horizontal": {
+        "value": "164px",
+        "rem": "10.25rem",
+        "description": "Horizontal padding for main container"
+      }
+    }
+  },
+  "borderRadius": {
+    "none": {
+      "value": "0px"
+    },
+    "sm": {
+      "value": "7px",
+      "rem": "0.4375rem",
+      "description": "Small radius for badges"
+    },
+    "md": {
+      "value": "8px",
+      "rem": "0.5rem",
+      "description": "Medium radius"
+    },
+    "lg": {
+      "value": "16px",
+      "rem": "1rem",
+      "description": "Large radius (rounded-2xl)"
+    },
+    "xl": {
+      "value": "22.901px",
+      "rem": "1.431rem",
+      "description": "Extra large radius for phone bezels"
+    },
+    "2xl": {
+      "value": "24px",
+      "rem": "1.5rem",
+      "description": "2XL radius (rounded-3xl)"
+    },
+    "full": {
+      "value": "9999px",
+      "description": "Fully rounded (pill shape)"
+    }
+  },
+  "breakpoints": {
+    "mobile": {
+      "value": "375px",
+      "description": "Mobile devices (iPhone base width)"
+    },
+    "tablet": {
+      "value": "768px",
+      "description": "Tablet devices"
+    },
+    "desktop": {
+      "value": "1024px",
+      "description": "Desktop screens"
+    },
+    "wide": {
+      "value": "1280px",
+      "description": "Wide desktop screens (max-w-7xl)"
+    },
+    "ultra-wide": {
+      "value": "1440px",
+      "description": "Ultra-wide screens (full page width)"
+    }
+  },
+  "maxWidth": {
+    "container": {
+      "value": "1280px",
+      "rem": "80rem",
+      "description": "Maximum container width (max-w-7xl)"
+    },
+    "section": {
+      "value": "1112px",
+      "rem": "69.5rem",
+      "description": "Section container width"
+    },
+    "card": {
+      "value": "546px",
+      "rem": "34.125rem",
+      "description": "Card container width"
+    }
+  },
+  "shadows": {
+    "none": {
+      "value": "none",
+      "description": "No shadow"
+    },
+    "sm": {
+      "value": "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+      "description": "Small shadow for sections",
+      "x": "0px",
+      "y": "4px",
+      "blur": "4px",
+      "spread": "0px",
+      "color": "rgba(0, 0, 0, 0.25)"
+    },
+    "glassmorphism": {
+      "backdropBlur": {
+        "value": "6px",
+        "description": "Backdrop blur for glassmorphism effect"
+      },
+      "opacity": {
+        "value": "0.4",
+        "description": "Background opacity for glassmorphism"
+      }
+    }
+  },
+  "effects": {
+    "backdropBlur": {
+      "value": "6px",
+      "description": "Backdrop blur value for glassmorphism"
+    },
+    "opacity": {
+      "background-base": {
+        "value": "0.4",
+        "description": "Opacity for base background"
+      }
+    }
+  },
+  "sizing": {
+    "icon": {
+      "xs": {
+        "value": "16px",
+        "rem": "1rem"
+      },
+      "sm": {
+        "value": "24px",
+        "rem": "1.5rem"
+      },
+      "md": {
+        "value": "37.241px",
+        "rem": "2.328rem",
+        "description": "Social media icon size"
+      }
+    },
+    "logo": {
+      "height": {
+        "value": "39.818px",
+        "rem": "2.489rem"
+      },
+      "width": {
+        "value": "121.488px",
+        "rem": "7.593rem",
+        "description": "Main logo width"
+      },
+      "width-footer": {
+        "value": "120px",
+        "rem": "7.5rem",
+        "description": "Footer logo width"
+      }
+    }
+  }
+}

@@ -1,0 +1,1519 @@
+{
+  "$schema": "https://json.schemastore.org/design-tokens",
+  "version": "1.0.0",
+  "name": "Pierre Landing Page Structure",
+  "description": "Complete structure and specifications for the Pierre landing page with design token mappings",
+  "sections": [
+    {
+      "id": "navbar",
+      "name": "Navigation Bar",
+      "nodeId": "481:2918",
+      "order": 1,
+      "layout": {
+        "width": "100%",
+        "maxWidth": "design-tokens.maxWidth.container",
+        "height": "128px",
+        "padding": {
+          "top": "design-tokens.spacing.scale.6",
+          "bottom": "design-tokens.spacing.scale.10",
+          "horizontal": "design-tokens.margin.section-horizontal"
+        },
+        "alignment": "center"
+      },
+      "background": {
+        "color": "transparent",
+        "effect": "glassmorphism"
+      },
+      "components": [
+        {
+          "id": "navbar-container",
+          "type": "container",
+          "nodeId": "481:2919",
+          "layout": {
+            "width": "100%",
+            "maxWidth": "design-tokens.maxWidth.container",
+            "display": "flex",
+            "justifyContent": "space-between",
+            "alignItems": "center"
+          },
+          "components": [
+            {
+              "id": "navbar-glass",
+              "type": "glassmorphism-container",
+              "nodeId": "481:2920",
+              "layout": {
+                "width": "100%",
+                "padding": {
+                  "horizontal": "26px",
+                  "vertical": "12px"
+                },
+                "borderRadius": "design-tokens.borderRadius.full",
+                "border": "1px solid",
+                "borderColor": "design-tokens.colors.neutral.border",
+                "backdropBlur": "design-tokens.effects.backdropBlur",
+                "backgroundColor": "design-tokens.colors.primary.background-base"
+              },
+              "components": [
+                {
+                  "id": "navbar-logo",
+                  "type": "logo",
+                  "nodeId": "481:2921",
+                  "layout": {
+                    "width": "design-tokens.sizing.logo.width",
+                    "height": "design-tokens.sizing.logo.height"
+                  },
+                  "image": {
+                    "name": "pierre-logo-navbar.webp",
+                    "source": "http://localhost:3845/assets/55810abd4bf623979c26d5ee7c8ad5c9b2c6d908.svg",
+                    "width": "121.488px",
+                    "height": "39.818px",
+                    "alt": "Pierre logo"
+                  }
+                },
+                {
+                  "id": "navbar-actions",
+                  "type": "button-group",
+                  "nodeId": "481:2941",
+                  "layout": {
+                    "display": "flex",
+                    "gap": "design-tokens.spacing.scale.4",
+                    "alignItems": "center",
+                    "justifyContent": "flex-end"
+                  },
+                  "components": [
+                    {
+                      "id": "cta-download",
+                      "type": "button",
+                      "variant": "primary",
+                      "nodeId": "481:2942",
+                      "layout": {
+                        "padding": {
+                          "horizontal": "design-tokens.spacing.padding.p-6",
+                          "vertical": "design-tokens.spacing.padding.p-4"
+                        },
+                        "borderRadius": "design-tokens.borderRadius.full"
+                      },
+                      "text": {
+                        "content": "Baixar APP",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground-inverted"
+                      },
+                      "background": {
+                        "color": "design-tokens.colors.accent.green-primary"
+                      }
+                    },
+                    {
+                      "id": "cta-login",
+                      "type": "button",
+                      "variant": "outline",
+                      "nodeId": "481:2943",
+                      "layout": {
+                        "padding": {
+                          "horizontal": "design-tokens.spacing.padding.p-6",
+                          "vertical": "design-tokens.spacing.padding.p-4"
+                        },
+                        "borderRadius": "design-tokens.borderRadius.full",
+                        "border": "1px solid",
+                        "borderColor": "design-tokens.colors.neutral.border"
+                      },
+                      "text": {
+                        "content": "Login",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "nodeId": "481:2853",
+      "order": 2,
+      "layout": {
+        "width": "100%",
+        "padding": {
+          "top": "208px",
+          "bottom": "design-tokens.spacing.scale.20",
+          "horizontal": "design-tokens.margin.section-horizontal"
+        },
+        "gap": "design-tokens.spacing.scale.20",
+        "alignment": "center",
+        "shadow": "design-tokens.shadows.sm"
+      },
+      "background": {
+        "color": "design-tokens.colors.primary.background"
+      },
+      "components": [
+        {
+          "id": "hero-content",
+          "type": "content-container",
+          "nodeId": "481:2854",
+          "layout": {
+            "width": "100%",
+            "maxWidth": "design-tokens.maxWidth.section",
+            "gap": "design-tokens.spacing.scale.16",
+            "alignment": "center"
+          },
+          "components": [
+            {
+              "id": "hero-text",
+              "type": "text-container",
+              "nodeId": "481:2855",
+              "layout": {
+                "width": "100%",
+                "gap": "design-tokens.spacing.scale.4",
+                "alignment": "center"
+              },
+              "components": [
+                {
+                  "id": "hero-title",
+                  "type": "heading",
+                  "nodeId": "481:2857",
+                  "text": {
+                    "content": "ASSISTENTE IA QUE\nFALA SUA LÍNGUA CHEGOU!",
+                    "fontSize": "design-tokens.typography.fontSize.hero-large",
+                    "fontWeight": "design-tokens.typography.fontWeight.bold",
+                    "lineHeight": "design-tokens.typography.lineHeight.leading-tight",
+                    "color": "design-tokens.colors.accent.text-light",
+                    "letterSpacing": "design-tokens.typography.letterSpacing.tight",
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "id": "hero-subtitle",
+                  "type": "subtitle",
+                  "nodeId": "481:2858",
+                  "text": {
+                    "content": "Pierre é a inteligência artificial que analisa seus gastos e te ajuda a economizar",
+                    "fontSize": "design-tokens.typography.fontSize.text-2xl",
+                    "fontWeight": "design-tokens.typography.fontWeight.normal",
+                    "lineHeight": "design-tokens.typography.lineHeight.leading-8",
+                    "color": "design-tokens.colors.neutral.foreground-muted",
+                    "textAlign": "center",
+                    "textTransform": "uppercase"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "hero-image",
+              "type": "phone-display",
+              "nodeId": "481:7043",
+              "layout": {
+                "width": "100%",
+                "gap": "design-tokens.spacing.gap.sm",
+                "alignment": "center"
+              },
+              "components": [
+                {
+                  "id": "iphone-bezel",
+                  "type": "image",
+                  "nodeId": "481:2859",
+                  "layout": {
+                    "width": "375px",
+                    "height": "812.977px",
+                    "borderRadius": "design-tokens.borderRadius.xl"
+                  },
+                  "image": {
+                    "name": "iphone-bezel.webp",
+                    "source": "http://localhost:3845/assets/b4327dc1b41406b16e09161472a0ed3e8fbb30d6.png",
+                    "width": "375px",
+                    "height": "812.977px",
+                    "alt": "iPhone displaying Pierre app interface"
+                  }
+                },
+                {
+                  "id": "iphone-screen",
+                  "type": "image-overlay",
+                  "nodeId": "I481:2859;5456:18829",
+                  "layout": {
+                    "width": "432.252px",
+                    "height": "870.229px",
+                    "position": "absolute",
+                    "top": "-28.63px",
+                    "left": "-28.63px"
+                  },
+                  "image": {
+                    "name": "iphone-screen-content.webp",
+                    "source": "http://localhost:3845/assets/110e89a881348c039db5211ca269bd480bacd45f.png",
+                    "width": "432.252px",
+                    "height": "870.229px",
+                    "alt": "Pierre app screenshots on iPhone"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "features",
+      "name": "Features Section",
+      "nodeId": "481:2860",
+      "order": 3,
+      "layout": {
+        "width": "100%",
+        "padding": {
+          "top": "120px",
+          "bottom": "design-tokens.spacing.scale.20",
+          "horizontal": "design-tokens.margin.section-horizontal"
+        },
+        "gap": "design-tokens.spacing.gap.lg",
+        "display": "flex",
+        "flexWrap": "wrap",
+        "alignment": "center"
+      },
+      "background": {
+        "color": "design-tokens.colors.primary.background"
+      },
+      "components": [
+        {
+          "id": "feature-card-1",
+          "type": "feature-card",
+          "variant": "dark",
+          "nodeId": "481:3023",
+          "layout": {
+            "width": "design-tokens.maxWidth.card",
+            "height": "600px",
+            "padding": {
+              "horizontal": "design-tokens.spacing.scale.6",
+              "vertical": "design-tokens.spacing.scale.6"
+            },
+            "borderRadius": "design-tokens.borderRadius.2xl",
+            "gap": "design-tokens.spacing.gap.xs"
+          },
+          "background": {
+            "color": "design-tokens.colors.primary.surface"
+          },
+          "components": [
+            {
+              "id": "feature-card-1-title",
+              "type": "heading",
+              "nodeId": "481:3025",
+              "text": {
+                "content": "O jeito mais simples de entender pra onde seu dinheiro vai",
+                "fontSize": "design-tokens.typography.fontSize.text-3xl",
+                "fontWeight": "design-tokens.typography.fontWeight.bold",
+                "lineHeight": "design-tokens.typography.lineHeight.leading-normal",
+                "color": "design-tokens.colors.neutral.foreground"
+              },
+              "layout": {
+                "padding": {
+                  "top": "design-tokens.spacing.scale.6",
+                  "bottom": "design-tokens.spacing.scale.3",
+                  "horizontal": "design-tokens.spacing.scale.6"
+                }
+              }
+            },
+            {
+              "id": "feature-card-1-image",
+              "type": "image",
+              "nodeId": "481:3027",
+              "layout": {
+                "width": "546px",
+                "height": "440px",
+                "borderRadius": "design-tokens.borderRadius.2xl"
+              },
+              "image": {
+                "name": "feature-simple-tracking.webp",
+                "source": "http://localhost:3845/assets/45684954b15e214aaf4837a52329444e757684b3.png",
+                "width": "546px",
+                "height": "440px",
+                "alt": "Interface mostrando visualização simples dos gastos"
+              }
+            }
+          ]
+        },
+        {
+          "id": "feature-card-2",
+          "type": "feature-card",
+          "variant": "light",
+          "nodeId": "481:4490",
+          "layout": {
+            "width": "design-tokens.maxWidth.card",
+            "height": "600px",
+            "padding": {
+              "horizontal": "design-tokens.spacing.scale.6",
+              "vertical": "design-tokens.spacing.scale.6"
+            },
+            "borderRadius": "design-tokens.borderRadius.2xl",
+            "gap": "design-tokens.spacing.gap.xs"
+          },
+          "background": {
+            "color": "design-tokens.colors.secondary.accent-hover"
+          },
+          "components": [
+            {
+              "id": "feature-card-2-title",
+              "type": "heading",
+              "nodeId": "481:4492",
+              "text": {
+                "content": "Receba insights reais sobre suas finanças",
+                "fontSize": "design-tokens.typography.fontSize.text-3xl",
+                "fontWeight": "design-tokens.typography.fontWeight.bold",
+                "lineHeight": "design-tokens.typography.lineHeight.leading-normal",
+                "color": "design-tokens.colors.neutral.foreground-inverted"
+              },
+              "layout": {
+                "padding": {
+                  "top": "design-tokens.spacing.scale.6",
+                  "bottom": "design-tokens.spacing.scale.3",
+                  "horizontal": "design-tokens.spacing.scale.6"
+                }
+              }
+            },
+            {
+              "id": "feature-card-2-image",
+              "type": "image",
+              "nodeId": "481:4493",
+              "layout": {
+                "width": "546px",
+                "height": "474px"
+              },
+              "image": {
+                "name": "feature-insights.webp",
+                "source": "http://localhost:3845/assets/0c4764ea48d6664739842611fecd694ccf388b4e.png",
+                "width": "546px",
+                "height": "474px",
+                "alt": "Insights financeiros personalizados"
+              }
+            }
+          ]
+        },
+        {
+          "id": "feature-highlight-1",
+          "type": "feature-highlight",
+          "variant": "green",
+          "nodeId": "481:7037",
+          "layout": {
+            "width": "design-tokens.maxWidth.section",
+            "height": "600px",
+            "padding": {
+              "horizontal": "design-tokens.spacing.scale.6",
+              "vertical": "design-tokens.spacing.scale.10"
+            },
+            "borderRadius": "design-tokens.borderRadius.2xl",
+            "gap": "design-tokens.spacing.gap.sm",
+            "display": "flex",
+            "justifyContent": "space-between",
+            "alignItems": "center"
+          },
+          "background": {
+            "color": "design-tokens.colors.accent.green-secondary"
+          },
+          "components": [
+            {
+              "id": "feature-highlight-1-text",
+              "type": "text-container",
+              "nodeId": "481:7038",
+              "layout": {
+                "width": "556px",
+                "height": "600px",
+                "padding": {
+                  "left": "design-tokens.spacing.scale.6",
+                  "right": "design-tokens.spacing.scale.3",
+                  "top": "design-tokens.spacing.scale.10",
+                  "bottom": "design-tokens.spacing.scale.10"
+                },
+                "display": "flex",
+                "flexDirection": "column",
+                "justifyContent": "space-between"
+              },
+              "components": [
+                {
+                  "id": "feature-highlight-1-title",
+                  "type": "heading",
+                  "nodeId": "481:7039",
+                  "text": {
+                    "content": "Seu consultor financeiro\nno seu bolso",
+                    "fontSize": "design-tokens.typography.fontSize.hero-extra-large",
+                    "fontWeight": "design-tokens.typography.fontWeight.bold",
+                    "lineHeight": "design-tokens.typography.lineHeight.leading-none",
+                    "color": "design-tokens.colors.neutral.foreground-inverted"
+                  }
+                },
+                {
+                  "id": "feature-highlight-1-description",
+                  "type": "body-text",
+                  "nodeId": "481:7040",
+                  "text": {
+                    "content": "O Pierre é seu consultor 24h no WhatsApp ou app —\nfala a sua língua, responde rápido e te ajuda a cuidar do dinheiro em qualquer hora do dia.",
+                    "fontSize": "design-tokens.typography.fontSize.text-xl",
+                    "fontWeight": "design-tokens.typography.fontWeight.normal",
+                    "lineHeight": "design-tokens.typography.lineHeight.leading-7",
+                    "color": "design-tokens.colors.neutral.foreground-disabled"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "feature-highlight-1-image",
+              "type": "image",
+              "nodeId": "481:7041",
+              "layout": {
+                "width": "556px",
+                "height": "600px"
+              },
+              "image": {
+                "name": "feature-consultant.webp",
+                "source": "http://localhost:3845/assets/3751d1c977b28e0fb8e0090ec0757bd3da55778f.png",
+                "width": "556px",
+                "height": "600px",
+                "alt": "Consultor financeiro Pierre no seu bolso"
+              }
+            }
+          ]
+        },
+        {
+          "id": "feature-card-3",
+          "type": "feature-card",
+          "variant": "light",
+          "nodeId": "481:4505",
+          "layout": {
+            "width": "design-tokens.maxWidth.card",
+            "height": "600px",
+            "padding": {
+              "horizontal": "design-tokens.spacing.scale.6",
+              "vertical": "design-tokens.spacing.scale.6"
+            },
+            "borderRadius": "design-tokens.borderRadius.2xl",
+            "gap": "design-tokens.spacing.gap.xs"
+          },
+          "background": {
+            "color": "design-tokens.colors.secondary.accent-hover"
+          },
+          "components": [
+            {
+              "id": "feature-card-3-title",
+              "type": "heading",
+              "nodeId": "481:4507",
+              "text": {
+                "content": "Segurança de ponta certificada pelo Banco Central",
+                "fontSize": "design-tokens.typography.fontSize.text-3xl",
+                "fontWeight": "design-tokens.typography.fontWeight.bold",
+                "lineHeight": "design-tokens.typography.lineHeight.leading-normal",
+                "color": "design-tokens.colors.neutral.foreground-inverted"
+              },
+              "layout": {
+                "padding": {
+                  "top": "design-tokens.spacing.scale.6",
+                  "bottom": "design-tokens.spacing.scale.3",
+                  "horizontal": "design-tokens.spacing.scale.6"
+                }
+              }
+            },
+            {
+              "id": "feature-card-3-image",
+              "type": "image",
+              "nodeId": "481:4508",
+              "layout": {
+                "width": "546px",
+                "height": "474px"
+              },
+              "image": {
+                "name": "feature-security.webp",
+                "source": "http://localhost:3845/assets/d03eff5e3d35769a322685ace6484fd56f9de5b2.png",
+                "width": "546px",
+                "height": "474px",
+                "alt": "Segurança certificada pelo Banco Central"
+              }
+            }
+          ]
+        },
+        {
+          "id": "feature-card-4",
+          "type": "feature-card",
+          "variant": "dark",
+          "nodeId": "481:4617",
+          "layout": {
+            "width": "design-tokens.maxWidth.card",
+            "height": "600px",
+            "padding": {
+              "horizontal": "design-tokens.spacing.scale.6",
+              "vertical": "design-tokens.spacing.scale.6"
+            },
+            "borderRadius": "design-tokens.borderRadius.2xl",
+            "gap": "design-tokens.spacing.gap.xs"
+          },
+          "background": {
+            "color": "design-tokens.colors.primary.surface"
+          },
+          "components": [
+            {
+              "id": "feature-card-4-title",
+              "type": "heading",
+              "nodeId": "481:4619",
+              "text": {
+                "content": "Gráficos e relatórios claros sobre suas finanças",
+                "fontSize": "design-tokens.typography.fontSize.text-3xl",
+                "fontWeight": "design-tokens.typography.fontWeight.bold",
+                "lineHeight": "design-tokens.typography.lineHeight.leading-normal",
+                "color": "design-tokens.colors.neutral.foreground"
+              },
+              "layout": {
+                "padding": {
+                  "top": "design-tokens.spacing.scale.6",
+                  "bottom": "design-tokens.spacing.scale.3",
+                  "horizontal": "design-tokens.spacing.scale.6"
+                }
+              }
+            },
+            {
+              "id": "feature-card-4-image",
+              "type": "image",
+              "nodeId": "481:4620",
+              "layout": {
+                "width": "546px",
+                "height": "474px"
+              },
+              "image": {
+                "name": "feature-reports.webp",
+                "source": "http://localhost:3845/assets/8652a2ad2487071926f99a8d6214275a34852b27.png",
+                "width": "546px",
+                "height": "474px",
+                "alt": "Gráficos e relatórios financeiros"
+              }
+            }
+          ]
+        },
+        {
+          "id": "feature-highlight-2",
+          "type": "feature-highlight",
+          "variant": "light",
+          "nodeId": "481:7031",
+          "layout": {
+            "width": "design-tokens.maxWidth.section",
+            "height": "600px",
+            "padding": {
+              "horizontal": "design-tokens.spacing.scale.6",
+              "vertical": "design-tokens.spacing.scale.10"
+            },
+            "borderRadius": "design-tokens.borderRadius.2xl",
+            "gap": "design-tokens.spacing.gap.sm",
+            "display": "flex",
+            "justifyContent": "space-between",
+            "alignItems": "center"
+          },
+          "background": {
+            "color": "design-tokens.colors.secondary.accent-hover"
+          },
+          "components": [
+            {
+              "id": "feature-highlight-2-image",
+              "type": "image",
+              "nodeId": "481:7032",
+              "layout": {
+                "width": "556px",
+                "height": "600px"
+              },
+              "image": {
+                "name": "feature-intelligence.webp",
+                "source": "http://localhost:3845/assets/e89f8a60ae067a89ff90bff1de23a85230145b64.png",
+                "width": "556px",
+                "height": "600px",
+                "alt": "Inteligência artificial para finanças"
+              }
+            },
+            {
+              "id": "feature-highlight-2-text",
+              "type": "text-container",
+              "nodeId": "481:7033",
+              "layout": {
+                "width": "556px",
+                "height": "600px",
+                "padding": {
+                  "left": "design-tokens.spacing.scale.6",
+                  "right": "design-tokens.spacing.scale.3",
+                  "top": "design-tokens.spacing.scale.10",
+                  "bottom": "design-tokens.spacing.scale.10"
+                },
+                "display": "flex",
+                "flexDirection": "column",
+                "justifyContent": "space-between"
+              },
+              "components": [
+                {
+                  "id": "feature-highlight-2-title",
+                  "type": "heading",
+                  "nodeId": "481:7034",
+                  "text": {
+                    "content": "Inteligência para cuidar do seu dinheiro",
+                    "fontSize": "design-tokens.typography.fontSize.hero-extra-large",
+                    "fontWeight": "design-tokens.typography.fontWeight.bold",
+                    "lineHeight": "design-tokens.typography.lineHeight.leading-none",
+                    "color": "design-tokens.colors.neutral.foreground-inverted"
+                  }
+                },
+                {
+                  "id": "feature-highlight-2-description",
+                  "type": "body-text",
+                  "nodeId": "481:7035",
+                  "text": {
+                    "content": "Pierre te avisa antes de você gastar demais e mostra como economizar todo mês",
+                    "fontSize": "design-tokens.typography.fontSize.text-xl",
+                    "fontWeight": "design-tokens.typography.fontWeight.normal",
+                    "lineHeight": "design-tokens.typography.lineHeight.leading-7",
+                    "color": "design-tokens.colors.neutral.foreground-disabled"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "feature-card-5",
+          "type": "feature-card",
+          "variant": "dark",
+          "nodeId": "481:4510",
+          "layout": {
+            "width": "design-tokens.maxWidth.card",
+            "height": "600px",
+            "padding": {
+              "horizontal": "design-tokens.spacing.scale.6",
+              "vertical": "design-tokens.spacing.scale.6"
+            },
+            "borderRadius": "design-tokens.borderRadius.2xl",
+            "gap": "design-tokens.spacing.gap.xs"
+          },
+          "background": {
+            "color": "design-tokens.colors.primary.surface"
+          },
+          "components": [
+            {
+              "id": "feature-card-5-title",
+              "type": "heading",
+              "nodeId": "481:4512",
+              "text": {
+                "content": "São mais de 56 instituições. Seu banco provavelmente está aqui.",
+                "fontSize": "design-tokens.typography.fontSize.text-3xl",
+                "fontWeight": "design-tokens.typography.fontWeight.bold",
+                "lineHeight": "design-tokens.typography.lineHeight.leading-normal",
+                "color": "design-tokens.colors.neutral.foreground"
+              },
+              "layout": {
+                "padding": {
+                  "top": "design-tokens.spacing.scale.6",
+                  "bottom": "design-tokens.spacing.scale.3",
+                  "horizontal": "design-tokens.spacing.scale.6"
+                }
+              }
+            },
+            {
+              "id": "feature-card-5-image",
+              "type": "image",
+              "nodeId": "481:4513",
+              "layout": {
+                "width": "546px",
+                "height": "474px"
+              },
+              "image": {
+                "name": "feature-banks.webp",
+                "source": "http://localhost:3845/assets/65706950bbc6cafacd1df9888cb04c73b76e4d15.png",
+                "width": "546px",
+                "height": "474px",
+                "alt": "56+ instituições financeiras conectadas"
+              }
+            }
+          ]
+        },
+        {
+          "id": "feature-card-6",
+          "type": "feature-card",
+          "variant": "light-accent",
+          "nodeId": "481:4662",
+          "layout": {
+            "width": "design-tokens.maxWidth.card",
+            "height": "600px",
+            "padding": {
+              "horizontal": "design-tokens.spacing.scale.6",
+              "vertical": "design-tokens.spacing.scale.6"
+            },
+            "borderRadius": "design-tokens.borderRadius.2xl",
+            "gap": "design-tokens.spacing.gap.xs"
+          },
+          "background": {
+            "color": "design-tokens.colors.secondary.accent"
+          },
+          "components": [
+            {
+              "id": "feature-card-6-title",
+              "type": "heading",
+              "nodeId": "481:4664",
+              "text": {
+                "content": "Lembretes inteligentes de contas, boletos e pagamentos",
+                "fontSize": "design-tokens.typography.fontSize.text-3xl",
+                "fontWeight": "design-tokens.typography.fontWeight.bold",
+                "lineHeight": "design-tokens.typography.lineHeight.leading-normal",
+                "color": "design-tokens.colors.neutral.foreground-inverted"
+              },
+              "layout": {
+                "padding": {
+                  "top": "design-tokens.spacing.scale.6",
+                  "bottom": "design-tokens.spacing.scale.3",
+                  "horizontal": "design-tokens.spacing.scale.6"
+                }
+              }
+            },
+            {
+              "id": "feature-card-6-image",
+              "type": "image",
+              "nodeId": "481:4665",
+              "layout": {
+                "width": "546px",
+                "height": "474px"
+              },
+              "image": {
+                "name": "feature-reminders.webp",
+                "source": "http://localhost:3845/assets/015806971f959bdc45543ce0d42158b4ebe93547.png",
+                "width": "546px",
+                "height": "474px",
+                "alt": "Lembretes inteligentes de pagamentos"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "name": "FAQ Section",
+      "nodeId": "481:4989",
+      "order": 4,
+      "layout": {
+        "width": "100%",
+        "padding": {
+          "horizontal": "design-tokens.margin.section-horizontal",
+          "vertical": "design-tokens.spacing.padding.p-24"
+        }
+      },
+      "background": {
+        "color": "design-tokens.colors.primary.background"
+      },
+      "components": [
+        {
+          "id": "faq-content",
+          "type": "content-container",
+          "nodeId": "481:4991",
+          "layout": {
+            "width": "100%",
+            "maxWidth": "design-tokens.maxWidth.section"
+          },
+          "components": [
+            {
+              "id": "faq-header",
+              "type": "section-header",
+              "nodeId": "481:4993",
+              "layout": {
+                "padding": {
+                  "bottom": "design-tokens.spacing.padding.p-11"
+                }
+              },
+              "components": [
+                {
+                  "id": "faq-title",
+                  "type": "heading",
+                  "nodeId": "481:4995",
+                  "text": {
+                    "content": "Perguntas frequentes",
+                    "fontSize": "design-tokens.typography.fontSize.text-5xl",
+                    "fontWeight": "design-tokens.typography.fontWeight.medium",
+                    "lineHeight": "design-tokens.typography.lineHeight.leading-none",
+                    "color": "design-tokens.colors.neutral.foreground"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "faq-items",
+              "type": "faq-list",
+              "components": [
+                {
+                  "id": "faq-item-1",
+                  "type": "faq-item",
+                  "variant": "collapsed",
+                  "nodeId": "481:4996",
+                  "layout": {
+                    "padding": {
+                      "vertical": "design-tokens.spacing.padding.p-4"
+                    },
+                    "borderBottom": "1px solid",
+                    "borderColor": "design-tokens.colors.neutral.border",
+                    "height": "56px",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "alignItems": "start"
+                  },
+                  "components": [
+                    {
+                      "id": "faq-item-1-question",
+                      "type": "faq-question",
+                      "text": {
+                        "content": "O que é o Open Finance?",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground"
+                      }
+                    },
+                    {
+                      "id": "faq-item-1-icon",
+                      "type": "icon",
+                      "icon": "chevron-down",
+                      "size": "design-tokens.sizing.icon.xs",
+                      "color": "design-tokens.colors.neutral.foreground"
+                    }
+                  ]
+                },
+                {
+                  "id": "faq-item-2",
+                  "type": "faq-item",
+                  "variant": "expanded",
+                  "nodeId": "481:4997",
+                  "layout": {
+                    "borderBottom": "1px solid",
+                    "borderColor": "design-tokens.colors.neutral.border"
+                  },
+                  "components": [
+                    {
+                      "id": "faq-item-2-header",
+                      "type": "faq-header",
+                      "layout": {
+                        "padding": {
+                          "vertical": "design-tokens.spacing.padding.p-4"
+                        },
+                        "display": "flex",
+                        "justifyContent": "space-between",
+                        "alignItems": "center"
+                      },
+                      "components": [
+                        {
+                          "id": "faq-item-2-question",
+                          "type": "faq-question",
+                          "text": {
+                            "content": "Posso conectar mais de um banco?",
+                            "fontSize": "design-tokens.typography.fontSize.text-base",
+                            "fontWeight": "design-tokens.typography.fontWeight.medium",
+                            "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                            "color": "design-tokens.colors.neutral.foreground"
+                          }
+                        },
+                        {
+                          "id": "faq-item-2-icon",
+                          "type": "icon",
+                          "icon": "chevron-up",
+                          "size": "design-tokens.sizing.icon.xs",
+                          "color": "design-tokens.colors.neutral.foreground"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "faq-item-2-answer",
+                      "type": "faq-answer",
+                      "layout": {
+                        "padding": {
+                          "bottom": "design-tokens.spacing.padding.p-4",
+                          "top": "0",
+                          "horizontal": "0"
+                        },
+                        "gap": "10px"
+                      },
+                      "text": {
+                        "content": "Sim! Você pode conectar quantos bancos quiser ao Pierre. Quanto mais contas conectadas, mais completa será sua visão financeira e mais precisos serão os insights personalizados que o Pierre pode te oferecer.",
+                        "fontSize": "design-tokens.typography.fontSize.text-sm",
+                        "fontWeight": "design-tokens.typography.fontWeight.normal",
+                        "lineHeight": "normal",
+                        "color": "design-tokens.colors.neutral.foreground-muted"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "faq-item-3",
+                  "type": "faq-item",
+                  "variant": "collapsed",
+                  "nodeId": "481:4998",
+                  "layout": {
+                    "padding": {
+                      "vertical": "design-tokens.spacing.padding.p-4"
+                    },
+                    "borderBottom": "1px solid",
+                    "borderColor": "design-tokens.colors.neutral.border",
+                    "height": "56px",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "alignItems": "start"
+                  },
+                  "components": [
+                    {
+                      "id": "faq-item-3-question",
+                      "type": "faq-question",
+                      "text": {
+                        "content": "Como eu me conecto com os bancos?",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground"
+                      }
+                    },
+                    {
+                      "id": "faq-item-3-icon",
+                      "type": "icon",
+                      "icon": "chevron-down",
+                      "size": "design-tokens.sizing.icon.xs",
+                      "color": "design-tokens.colors.neutral.foreground"
+                    }
+                  ]
+                },
+                {
+                  "id": "faq-item-4",
+                  "type": "faq-item",
+                  "variant": "collapsed",
+                  "nodeId": "481:4999",
+                  "layout": {
+                    "padding": {
+                      "vertical": "design-tokens.spacing.padding.p-4"
+                    },
+                    "borderBottom": "1px solid",
+                    "borderColor": "design-tokens.colors.neutral.border",
+                    "height": "56px",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "alignItems": "start"
+                  },
+                  "components": [
+                    {
+                      "id": "faq-item-4-question",
+                      "type": "faq-question",
+                      "text": {
+                        "content": "Preciso fornecer minhas senhas bancárias ao Pierre?",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground"
+                      }
+                    },
+                    {
+                      "id": "faq-item-4-icon",
+                      "type": "icon",
+                      "icon": "chevron-down",
+                      "size": "design-tokens.sizing.icon.xs",
+                      "color": "design-tokens.colors.neutral.foreground"
+                    }
+                  ]
+                },
+                {
+                  "id": "faq-item-5",
+                  "type": "faq-item",
+                  "variant": "collapsed",
+                  "nodeId": "481:5016",
+                  "layout": {
+                    "padding": {
+                      "vertical": "design-tokens.spacing.padding.p-4"
+                    },
+                    "borderBottom": "1px solid",
+                    "borderColor": "design-tokens.colors.neutral.border",
+                    "height": "56px",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "alignItems": "start"
+                  },
+                  "components": [
+                    {
+                      "id": "faq-item-5-question",
+                      "type": "faq-question",
+                      "text": {
+                        "content": "O Pierre consegue efetuar transações e pagamentos?",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground"
+                      }
+                    },
+                    {
+                      "id": "faq-item-5-icon",
+                      "type": "icon",
+                      "icon": "chevron-down",
+                      "size": "design-tokens.sizing.icon.xs",
+                      "color": "design-tokens.colors.neutral.foreground"
+                    }
+                  ]
+                },
+                {
+                  "id": "faq-item-6",
+                  "type": "faq-item",
+                  "variant": "collapsed",
+                  "nodeId": "481:5021",
+                  "layout": {
+                    "padding": {
+                      "vertical": "design-tokens.spacing.padding.p-4"
+                    },
+                    "borderBottom": "1px solid",
+                    "borderColor": "design-tokens.colors.neutral.border",
+                    "height": "56px",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "alignItems": "start"
+                  },
+                  "components": [
+                    {
+                      "id": "faq-item-6-question",
+                      "type": "faq-question",
+                      "text": {
+                        "content": "Preciso configurar ou instalar algo no app do meu banco?",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground"
+                      }
+                    },
+                    {
+                      "id": "faq-item-6-icon",
+                      "type": "icon",
+                      "icon": "chevron-down",
+                      "size": "design-tokens.sizing.icon.xs",
+                      "color": "design-tokens.colors.neutral.foreground"
+                    }
+                  ]
+                },
+                {
+                  "id": "faq-item-7",
+                  "type": "faq-item",
+                  "variant": "collapsed",
+                  "nodeId": "481:5026",
+                  "layout": {
+                    "padding": {
+                      "vertical": "design-tokens.spacing.padding.p-4"
+                    },
+                    "borderBottom": "1px solid",
+                    "borderColor": "design-tokens.colors.neutral.border",
+                    "height": "56px",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "alignItems": "start"
+                  },
+                  "components": [
+                    {
+                      "id": "faq-item-7-question",
+                      "type": "faq-question",
+                      "text": {
+                        "content": "Posso adicionar meus gastos e transações manualmente?",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground"
+                      }
+                    },
+                    {
+                      "id": "faq-item-7-icon",
+                      "type": "icon",
+                      "icon": "chevron-down",
+                      "size": "design-tokens.sizing.icon.xs",
+                      "color": "design-tokens.colors.neutral.foreground"
+                    }
+                  ]
+                },
+                {
+                  "id": "faq-item-8",
+                  "type": "faq-item",
+                  "variant": "collapsed",
+                  "nodeId": "481:5031",
+                  "layout": {
+                    "padding": {
+                      "vertical": "design-tokens.spacing.padding.p-4"
+                    },
+                    "borderBottom": "1px solid",
+                    "borderColor": "design-tokens.colors.neutral.border",
+                    "height": "56px",
+                    "display": "flex",
+                    "justifyContent": "space-between",
+                    "alignItems": "start"
+                  },
+                  "components": [
+                    {
+                      "id": "faq-item-8-question",
+                      "type": "faq-question",
+                      "text": {
+                        "content": "Posso fornecer apenas uma conta ou apenas um cartão da minha instituição financeira?",
+                        "fontSize": "design-tokens.typography.fontSize.text-base",
+                        "fontWeight": "design-tokens.typography.fontWeight.medium",
+                        "lineHeight": "design-tokens.typography.lineHeight.leading-6",
+                        "color": "design-tokens.colors.neutral.foreground"
+                      }
+                    },
+                    {
+                      "id": "faq-item-8-icon",
+                      "type": "icon",
+                      "icon": "chevron-down",
+                      "size": "design-tokens.sizing.icon.xs",
+                      "color": "design-tokens.colors.neutral.foreground"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "nodeId": "481:6569",
+      "order": 5,
+      "layout": {
+        "width": "100%",
+        "padding": {
+          "horizontal": "design-tokens.margin.section-horizontal",
+          "vertical": "design-tokens.spacing.padding.p-24"
+        },
+        "gap": "design-tokens.spacing.scale.10"
+      },
+      "background": {
+        "color": "design-tokens.colors.primary.background"
+      },
+      "components": [
+        {
+          "id": "footer-main",
+          "type": "footer-container",
+          "nodeId": "481:6570",
+          "layout": {
+            "width": "100%",
+            "display": "flex",
+            "justifyContent": "space-between",
+            "alignItems": "flex-end"
+          },
+          "components": [
+            {
+              "id": "footer-left",
+              "type": "footer-content",
+              "nodeId": "481:6572",
+              "layout": {
+                "width": "346px",
+                "height": "277.06px",
+                "padding": {
+                  "vertical": "design-tokens.spacing.scale.6"
+                },
+                "display": "flex",
+                "flexDirection": "column",
+                "gap": "design-tokens.spacing.scale.6"
+              },
+              "components": [
+                {
+                  "id": "footer-logo-section",
+                  "type": "logo-section",
+                  "nodeId": "481:6573",
+                  "layout": {
+                    "gap": "design-tokens.spacing.scale.6"
+                  },
+                  "components": [
+                    {
+                      "id": "footer-logo",
+                      "type": "logo",
+                      "nodeId": "481:6574",
+                      "layout": {
+                        "width": "design-tokens.sizing.logo.width-footer",
+                        "height": "design-tokens.sizing.logo.height"
+                      },
+                      "image": {
+                        "name": "pierre-logo-footer.webp",
+                        "source": "http://localhost:3845/assets/e1f06a026cb07e2c6fdc4e4f2fa1bad9bcd5871b.svg",
+                        "width": "120px",
+                        "height": "39.818px",
+                        "alt": "Pierre logo"
+                      }
+                    },
+                    {
+                      "id": "footer-description",
+                      "type": "body-text",
+                      "nodeId": "481:6595",
+                      "text": {
+                        "content": "Seu assistente de IA para finanças pessoais. Converse com o seu dinheiro.",
+                        "fontSize": "design-tokens.typography.fontSize.text-sm",
+                        "fontWeight": "design-tokens.typography.fontWeight.normal",
+                        "lineHeight": "20px",
+                        "color": "design-tokens.colors.neutral.foreground-muted",
+                        "textTransform": "uppercase"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "footer-links",
+                  "type": "footer-links",
+                  "nodeId": "481:6599",
+                  "layout": {
+                    "display": "flex",
+                    "gap": "design-tokens.spacing.scale.6",
+                    "alignItems": "center",
+                    "justifyContent": "flex-start"
+                  },
+                  "components": [
+                    {
+                      "id": "footer-social",
+                      "type": "social-links",
+                      "nodeId": "481:6600",
+                      "layout": {
+                        "display": "flex",
+                        "gap": "3px",
+                        "alignItems": "center"
+                      },
+                      "components": [
+                        {
+                          "id": "social-instagram",
+                          "type": "social-link",
+                          "nodeId": "481:6601",
+                          "layout": {
+                            "width": "design-tokens.sizing.icon.md",
+                            "height": "design-tokens.sizing.icon.md"
+                          },
+                          "image": {
+                            "name": "icon-instagram.webp",
+                            "source": "http://localhost:3845/assets/85855d055d155e36bc659d2dcdfbb9d4608f277c.svg",
+                            "width": "24px",
+                            "height": "24px",
+                            "alt": "Instagram"
+                          }
+                        },
+                        {
+                          "id": "social-discord",
+                          "type": "social-link",
+                          "nodeId": "481:6603",
+                          "layout": {
+                            "width": "design-tokens.sizing.icon.md",
+                            "height": "design-tokens.sizing.icon.md"
+                          },
+                          "image": {
+                            "name": "icon-discord.webp",
+                            "source": "http://localhost:3845/assets/470c3a1321e54090c4736d4c904daf11f6882f79.svg",
+                            "width": "24px",
+                            "height": "24px",
+                            "alt": "Discord"
+                          }
+                        },
+                        {
+                          "id": "social-whatsapp",
+                          "type": "social-link",
+                          "nodeId": "481:6605",
+                          "layout": {
+                            "width": "design-tokens.sizing.icon.md",
+                            "height": "design-tokens.sizing.icon.md"
+                          },
+                          "image": {
+                            "name": "icon-whatsapp.webp",
+                            "source": "http://localhost:3845/assets/1df6c23c13516087e46fd78087673c7065ec7e25.svg",
+                            "width": "24px",
+                            "height": "24px",
+                            "alt": "WhatsApp"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "footer-divider",
+                      "type": "divider",
+                      "nodeId": "481:6607",
+                      "layout": {
+                        "width": "0.776px",
+                        "height": "12.414px",
+                        "backgroundColor": "design-tokens.colors.neutral.foreground-muted"
+                      }
+                    },
+                    {
+                      "id": "footer-terms",
+                      "type": "link",
+                      "nodeId": "481:6608",
+                      "text": {
+                        "content": "TERMOS DE USO",
+                        "fontSize": "design-tokens.typography.fontSize.text-sm",
+                        "fontWeight": "design-tokens.typography.fontWeight.normal",
+                        "lineHeight": "20px",
+                        "color": "rgba(255,255,255,0.7)"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "footer-app-stores",
+                  "type": "app-store-badges",
+                  "nodeId": "481:7000",
+                  "layout": {
+                    "display": "flex",
+                    "gap": "design-tokens.spacing.gap.sm",
+                    "alignItems": "center"
+                  },
+                  "components": [
+                    {
+                      "id": "app-store-ios",
+                      "type": "app-store-badge",
+                      "nodeId": "481:7001",
+                      "layout": {
+                        "width": "126px",
+                        "height": "40px",
+                        "borderRadius": "design-tokens.borderRadius.sm",
+                        "border": "1px solid",
+                        "borderColor": "design-tokens.colors.neutral.border",
+                        "backgroundColor": "design-tokens.colors.primary.background"
+                      },
+                      "image": {
+                        "name": "app-store-badge.webp",
+                        "source": "http://localhost:3845/assets/...",
+                        "width": "126px",
+                        "height": "40px",
+                        "alt": "Download on the App Store"
+                      }
+                    },
+                    {
+                      "id": "app-store-android",
+                      "type": "app-store-badge",
+                      "nodeId": "481:7002",
+                      "layout": {
+                        "width": "135px",
+                        "height": "40px",
+                        "borderRadius": "5px",
+                        "border": "1px solid",
+                        "borderColor": "design-tokens.colors.neutral.border",
+                        "backgroundColor": "design-tokens.colors.primary.background"
+                      },
+                      "image": {
+                        "name": "google-play-badge.webp",
+                        "source": "http://localhost:3845/assets/...",
+                        "width": "135px",
+                        "height": "40px",
+                        "alt": "Get it on Google Play"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "footer-qr",
+              "type": "qr-code",
+              "nodeId": "481:6980",
+              "layout": {
+                "width": "269px",
+                "height": "269px",
+                "gap": "design-tokens.spacing.scale.10"
+              },
+              "components": [
+                {
+                  "id": "qr-code-image",
+                  "type": "image",
+                  "nodeId": "481:6609",
+                  "layout": {
+                    "aspectRatio": "1:1",
+                    "borderRadius": "design-tokens.borderRadius.2xl"
+                  },
+                  "image": {
+                    "name": "qr-code-pierre.webp",
+                    "source": "http://localhost:3845/assets/...",
+                    "width": "269px",
+                    "height": "269px",
+                    "alt": "QR Code para download do app Pierre"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "footer-divider",
+          "type": "divider",
+          "nodeId": "481:6941",
+          "layout": {
+            "width": "100%",
+            "height": "0.776px",
+            "backgroundColor": "rgba(158,158,158,0.3)"
+          }
+        },
+        {
+          "id": "footer-copyright",
+          "type": "copyright",
+          "nodeId": "481:6942",
+          "layout": {
+            "width": "100%",
+            "display": "flex",
+            "justifyContent": "space-between",
+            "alignItems": "center"
+          },
+          "components": [
+            {
+              "id": "copyright-text",
+              "type": "text",
+              "nodeId": "481:6943",
+              "text": {
+                "content": "© 2025 Pierre - Assistente de IA Financeiro. Todos os direitos reservados.",
+                "fontSize": "design-tokens.typography.fontSize.text-sm",
+                "fontWeight": "design-tokens.typography.fontWeight.normal",
+                "lineHeight": "20px",
+                "color": "design-tokens.colors.neutral.foreground-muted",
+                "textTransform": "uppercase"
+              }
+            },
+            {
+              "id": "powered-by",
+              "type": "text",
+              "nodeId": "481:6944",
+              "text": {
+                "content": "Powered by CloudWalk, Inc.",
+                "fontSize": "design-tokens.typography.fontSize.text-sm",
+                "fontWeight": "design-tokens.typography.fontWeight.normal",
+                "lineHeight": "normal",
+                "color": "design-tokens.colors.neutral.foreground-muted",
+                "textAlign": "right"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "designTokenMappings": {
+    "note": "All design token references use the format 'design-tokens.{category}.{property}.{value}' referencing the design-tokens.json file",
+    "examples": {
+      "color": "design-tokens.colors.neutral.foreground",
+      "typography": "design-tokens.typography.fontSize.text-base",
+      "spacing": "design-tokens.spacing.padding.p-4",
+      "borderRadius": "design-tokens.borderRadius.full",
+      "shadow": "design-tokens.shadows.sm"
+    }
+  },
+  "responsiveBreakpoints": {
+    "mobile": "design-tokens.breakpoints.mobile",
+    "tablet": "design-tokens.breakpoints.tablet",
+    "desktop": "design-tokens.breakpoints.desktop",
+    "wide": "design-tokens.breakpoints.wide",
+    "ultraWide": "design-tokens.breakpoints.ultra-wide"
+  },
+  "imageAssets": {
+    "note": "All images should be converted to WebP format for production",
+    "categories": {
+      "logos": ["pierre-logo-navbar.webp", "pierre-logo-footer.webp"],
+      "hero": ["iphone-bezel.webp", "iphone-screen-content.webp"],
+      "features": [
+        "feature-simple-tracking.webp",
+        "feature-insights.webp",
+        "feature-consultant.webp",
+        "feature-security.webp",
+        "feature-reports.webp",
+        "feature-intelligence.webp",
+        "feature-banks.webp",
+        "feature-reminders.webp"
+      ],
+      "icons": ["icon-instagram.webp", "icon-discord.webp", "icon-whatsapp.webp"],
+      "appStores": ["app-store-badge.webp", "google-play-badge.webp"],
+      "qrCode": ["qr-code-pierre.webp"]
+    }
+  }
+}
