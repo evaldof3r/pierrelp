@@ -1,4 +1,8 @@
-import React from 'react';
+'use client';
+
+import React, { useRef, useEffect } from 'react';
+import { gsap } from '@/lib/animations';
+import { prefersReducedMotion, getDuration } from '@/lib/animations';
 
 export interface ButtonProps {
   children: React.ReactNode;
@@ -19,6 +23,68 @@ export function Button({
   type = 'button',
   disabled = false,
 }: ButtonProps) {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  // Micro-interactions: hover scale
+  useEffect(() => {
+    if (prefersReducedMotion() || disabled || !buttonRef.current) return;
+
+    const button = buttonRef.current;
+    let hoverTween: gsap.core.Tween | null = null;
+    let activeTween: gsap.core.Tween | null = null;
+
+    const handleMouseEnter = () => {
+      if (activeTween) activeTween.kill();
+      hoverTween = gsap.to(button, {
+        scale: 1.02,
+        duration: getDuration(0.2),
+        ease: 'ease.inOut',
+      });
+    };
+
+    const handleMouseLeave = () => {
+      if (hoverTween) hoverTween.kill();
+      if (activeTween) activeTween.kill();
+      gsap.to(button, {
+        scale: 1,
+        duration: getDuration(0.2),
+        ease: 'ease.inOut',
+      });
+    };
+
+    const handleMouseDown = () => {
+      if (hoverTween) hoverTween.kill();
+      activeTween = gsap.to(button, {
+        scale: 0.98,
+        duration: getDuration(0.1),
+        ease: 'ease.inOut',
+      });
+    };
+
+    const handleMouseUp = () => {
+      if (activeTween) activeTween.kill();
+      gsap.to(button, {
+        scale: 1.02,
+        duration: getDuration(0.1),
+        ease: 'ease.inOut',
+      });
+    };
+
+    button.addEventListener('mouseenter', handleMouseEnter);
+    button.addEventListener('mouseleave', handleMouseLeave);
+    button.addEventListener('mousedown', handleMouseDown);
+    button.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      button.removeEventListener('mouseenter', handleMouseEnter);
+      button.removeEventListener('mouseleave', handleMouseLeave);
+      button.removeEventListener('mousedown', handleMouseDown);
+      button.removeEventListener('mouseup', handleMouseUp);
+      if (hoverTween) hoverTween.kill();
+      if (activeTween) activeTween.kill();
+    };
+  }, [disabled]);
+
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-colors rounded-full';
   
   const variantStyles = {
@@ -31,13 +97,14 @@ export function Button({
   const sizeStyles = {
     sm: 'px-[var(--spacing-4)] py-[var(--spacing-2)] text-sm',
     md: 'px-[var(--spacing-6)] py-[var(--spacing-4)] text-base',
-    lg: 'px-[var(--spacing-6)] py-[var(--spacing-4)] text-base',
+    lg: 'px-[var(--spacing-8)] py-[var(--spacing-4)] text-lg',
   };
   
   const disabledStyles = disabled ? 'opacity-50 cursor-not-allowed' : '';
   
   return (
     <button
+      ref={buttonRef}
       type={type}
       onClick={onClick}
       disabled={disabled}

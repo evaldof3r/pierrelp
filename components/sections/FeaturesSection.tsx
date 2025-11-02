@@ -2,9 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
-import { gsap } from '@/lib/animations';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { prefersReducedMotion, getDuration } from '@/lib/animations';
+import { gsap, ScrollTrigger, prefersReducedMotion, getDuration } from '@/lib/animations';
 import CursorFollow from '@/components/ui/cursor-follow';
 
 interface FeatureCardProps {

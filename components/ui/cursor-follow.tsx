@@ -93,7 +93,7 @@ const CursorFollow: React.FC<CursorFollowProps> = ({
       className={`relative w-full ${className}`}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
-      style={{ cursor: "none" }}
+      style={{ cursor: "none", position: "relative", zIndex: 1 }}
     >
       {children}
       <motion.div
@@ -104,8 +104,14 @@ const CursorFollow: React.FC<CursorFollowProps> = ({
           transition: { duration: 0.32, ease: "easeInOut" },
         }}
         exit={{ opacity: 0, scale: 0.7 }}
-        className="pointer-events-none fixed z-50"
-        style={{ left: 0, top: 0, x: springX, y: springY }}
+        className="pointer-events-none fixed"
+        style={{ 
+          left: 0, 
+          top: 0, 
+          x: springX, 
+          y: springY, 
+          zIndex: 100
+        }}
       >
         <motion.div
           layout

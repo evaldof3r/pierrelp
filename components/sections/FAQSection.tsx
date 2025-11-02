@@ -1,7 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Container } from '../ui/Container';
+import { gsap } from '@/lib/animations';
+import { prefersReducedMotion, getDuration } from '@/lib/animations';
 
 interface FAQItemProps {
   question: string;
@@ -11,14 +13,47 @@ interface FAQItemProps {
 }
 
 function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps) {
+  const itemRef = useRef<HTMLDivElement>(null);
+  const answerRef = useRef<HTMLDivElement>(null);
+
+  // Accordion animation
+  useEffect(() => {
+    if (prefersReducedMotion() || !answerRef.current || !answer) return;
+
+    if (isOpen) {
+      // Open animation
+      gsap.fromTo(
+        answerRef.current,
+        {
+          height: 0,
+          opacity: 0,
+        },
+        {
+          height: 'auto',
+          opacity: 1,
+          duration: getDuration(0.4),
+          ease: 'ease.inOut',
+        }
+      );
+    } else {
+      // Close animation
+      gsap.to(answerRef.current, {
+        height: 0,
+        opacity: 0,
+        duration: getDuration(0.4),
+        ease: 'ease.inOut',
+      });
+    }
+  }, [isOpen, answer]);
+
   return (
-    <div className="w-full border-b border-[var(--color-neutral-border)]">
+    <div ref={itemRef} className="w-full border-b border-[var(--color-neutral-border)] overflow-hidden">
       {/* FAQ Header */}
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between py-[16px] px-0 cursor-pointer hover:opacity-80 transition-opacity"
+        className="w-full flex items-center justify-between py-3 md:py-4 lg:py-[16px] px-0 cursor-pointer hover:opacity-80 transition-opacity gap-2 md:gap-4"
       >
-        <h3 className="flex-1 text-left font-medium leading-[24px] text-[var(--color-neutral-foreground)] text-[16px]">
+        <h3 className="flex-1 text-left font-medium leading-[20px] md:leading-[22px] lg:leading-[24px] text-[var(--color-neutral-foreground)] text-[14px] md:text-[15px] lg:text-[16px]">
           {question}
         </h3>
         <div className="w-[16px] h-[16px] relative shrink-0">
@@ -57,11 +92,13 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps) {
       </button>
       
       {/* FAQ Answer */}
-      {isOpen && answer && (
-        <div className="pb-[16px] pt-0 px-0">
-          <p className="font-normal leading-normal text-[var(--color-neutral-foreground-muted)] text-[14px]">
-            {answer}
-          </p>
+      {answer && (
+        <div ref={answerRef} className="overflow-hidden" style={{ height: isOpen ? 'auto' : 0 }}>
+          <div className="pb-3 md:pb-4 lg:pb-[16px] pt-0 px-0">
+            <p className="font-normal leading-[20px] md:leading-[22px] lg:leading-normal text-[var(--color-neutral-foreground-muted)] text-[13px] md:text-[13.5px] lg:text-[14px]">
+              {answer}
+            </p>
+          </div>
         </div>
       )}
     </div>
@@ -70,6 +107,30 @@ function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps) {
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null); // Todas começam fechadas
+  const sectionRef = useRef<HTMLElement>(null);
+  const itemsContainerRef = useRef<HTMLDivElement>(null);
+
+  // FAQ Items scroll-in animation
+  useEffect(() => {
+    if (prefersReducedMotion() || !itemsContainerRef.current) return;
+
+    const items = itemsContainerRef.current.children;
+    if (items.length === 0) return;
+
+    gsap.from(items, {
+      opacity: 0,
+      y: 30,
+      duration: getDuration(0.5),
+      ease: 'power2.out',
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: itemsContainerRef.current,
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+        once: true,
+      },
+    });
+  }, []);
 
   const faqs = [
     {
@@ -111,17 +172,20 @@ export function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-[var(--color-primary-background)] flex flex-col items-center px-[164px] py-[96px]">
+    <section
+      ref={sectionRef}
+      className="w-full bg-[var(--color-primary-background)] flex flex-col items-center px-4 md:px-8 lg:px-[164px] py-12 md:py-16 lg:py-[96px]"
+    >
       <Container maxWidth="section" className="flex flex-col items-start w-full">
         {/* FAQ Header */}
-        <div className="w-full pb-[44px] pt-0 px-0">
-          <h2 className="font-medium leading-none text-[var(--color-neutral-foreground)] text-[48px]">
+        <div className="w-full pb-8 md:pb-10 lg:pb-[44px] pt-0 px-0">
+          <h2 className="font-medium leading-none text-[var(--color-neutral-foreground)] text-[28px] md:text-[36px] lg:text-[48px]">
             Perguntas frequentes
           </h2>
         </div>
 
         {/* FAQ Items */}
-        <div className="w-full flex flex-col">
+        <div ref={itemsContainerRef} className="w-full flex flex-col">
           {faqs.map((faq, index) => (
             <FAQItem
               key={index}
